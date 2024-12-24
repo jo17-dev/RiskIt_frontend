@@ -1,0 +1,9 @@
+.header{
+    font-family: 'lexend Zetta';
+    font-size: x-large;
+    text-align: center;
+    border-bottom: 1px solid var(--primary);
+    color: var(--primary);
+    padding: 20px;
+    backdrop-filter: blur(10px);
+}

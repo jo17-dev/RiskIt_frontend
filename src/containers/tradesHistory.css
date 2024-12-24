@@ -1,0 +1,32 @@
+.section-header{
+    display: flex;
+    flex-direction: column;
+}
+.section-header > .section-title{
+    text-align: center;
+    font-family: 'Lexend Zetta';
+    color: var(--primary);
+    font-style: x-large;
+    font-weight: bolder;
+}
+.datas-table{
+    border-collapse: collapse;
+    /* border: 1px solid blue; */
+    width: 100%;
+    backdrop-filter: blur(8px);
+    text-align: center;
+    background-color: var(--black-opacity);
+    margin-top: 20px;
+}
+
+.datas-tablea-header tr td{
+    /* border: 1px solid green; */
+    border-bottom: 1px solid var(--primary);
+    /* background-color: green; */
+    padding: 10px;
+    color: var(--primary);
+}
+
+.datas-table tbody{
+    overflow-y: scroll;
+}

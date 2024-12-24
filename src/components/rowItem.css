@@ -1,0 +1,5 @@
+.row-item > td{
+    /* background-color: green; */
+    border-bottom: 1px dashed var(--primary);
+    padding: 4px;
+}

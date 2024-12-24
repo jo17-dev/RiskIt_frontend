@@ -1,0 +1,6 @@
+.total-curent-balance{
+    border-right: 2px solid var(--primary);
+    color: var(--primary);
+    width: fit-content;
+    padding: 4px;
+}
