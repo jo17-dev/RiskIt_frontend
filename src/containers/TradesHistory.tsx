@@ -33,7 +33,6 @@ const TradesHitory = ()=>{
                 <RowItem />
                 <RowItem />
                 <RowItem />
-                <RowItem />
             </tbody>
         </table>
         </>

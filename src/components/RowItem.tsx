@@ -8,7 +8,7 @@ const RowItem = (props:any)=>{
             <td>{props?.sl || "N/A"}</td>
             <td>{props?.tp || "N/A"}</td>
             <td>{props?.marge || "N/A"}</td>
-            <td> <button className="btn" >Delete</button> </td>
+            <td> <button className="btn" onClick={props?.handleAction} > {props.actionText || "Delete"} </button> </td>
         </tr>
         </>
     )

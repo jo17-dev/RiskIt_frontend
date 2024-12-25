@@ -1,0 +1,47 @@
+#pop-upwhole-page-wrapper{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
+    color: var(--primary);
+    font-family: 'lexend Zetta';
+    font-size: 0.9rem;
+
+    /* display: flex; */
+    display: flex; /* On le met comme ça pour initialiser l'état du popup au chargement du content car de base il est présent dans la page */
+    justify-content: center;
+}
+#pop-upwhole-page-wrapper > .content-wrapper{
+    border: 1px solid var(--primary);
+    border-radius: 6px;
+    width: fit-content;
+    margin: auto;
+    vertical-align: middle;
+    padding: 5px;
+}
+#pop-upwhole-page-wrapper > .content-wrapper > *{
+    width: 100%;
+    /* margin: 10px; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* border: 1px solid blue; */
+}
+.popup-title{
+    padding: 4px;
+}
+
+.btn-container{
+    margin-bottom: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; 
+    font-size: x-large; 
+}
+.btn-container > .btn:last-child{
+    background-color: var(--primary);
+    color: var(--text-secondary);
+    margin-left: 10px;
+}
