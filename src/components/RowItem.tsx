@@ -1,4 +1,9 @@
 import './rowItem.css';
+/**
+ * 
+ * @param props {id, trade, sl, tp, marge, actionText, handleAction}
+ * @returns 
+ */
 const RowItem = (props:any)=>{
     return (
         <>

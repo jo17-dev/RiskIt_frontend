@@ -1,9 +1,25 @@
+import { useEffect, useState } from "react";
 import Balance from "../components/Balance";
 import RowItem from "../components/RowItem";
+import axios, { AxiosResponse } from "axios";
 import './tradesHistory.css';
 
 const TradesHitory = ()=>{
+    const [trades, setTrades] = useState([]);
     // on recupere tout l'historique des trades:
+    useEffect(()=>{
+
+        axios.get("http://localhost:500/history").then((value)=>{
+                console.log( value.data);
+
+                setTrades(value.data?.datas);
+            }).catch((reason:any)=>{
+                console.warn("Aucun historique n'as été recupéré");
+            });
+
+    
+    }, []);
+
     return(
         <>
         <section className="section-header">
@@ -22,17 +38,11 @@ const TradesHitory = ()=>{
                 </tr>
             </thead>
             <tbody>
-                <RowItem />
-                <RowItem />
-                <RowItem />
-                <RowItem />
-                <RowItem />
-                <RowItem />
-                <RowItem />
-                <RowItem />
-                <RowItem />
-                <RowItem />
-                <RowItem />
+                {
+                    trades.map((value:any, key:number)=>{
+                        return <RowItem key={key} id={value.id} trade={value.type} sl={value.sl} tp={value.tp} marge={value.marge} />
+                    })
+                }
             </tbody>
         </table>
         </>
