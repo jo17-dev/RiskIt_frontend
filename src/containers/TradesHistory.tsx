@@ -1,17 +1,14 @@
 import { useEffect, useState } from "react";
 import Balance from "../components/Balance";
 import RowItem from "../components/RowItem";
-import axios, { AxiosResponse } from "axios";
+import axios from "axios";
 import './tradesHistory.css';
 
 const TradesHitory = ()=>{
     const [trades, setTrades] = useState([]);
     // on recupere tout l'historique des trades:
     useEffect(()=>{
-
         axios.get("http://localhost:500/history").then((value)=>{
-                console.log( value.data);
-
                 setTrades(value.data?.datas);
             }).catch((reason:any)=>{
                 console.warn("Aucun historique n'as été recupéré");

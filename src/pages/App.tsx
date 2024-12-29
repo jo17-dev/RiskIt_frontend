@@ -5,6 +5,7 @@ import TradesHitory from '../containers/TradesHistory';
 import { useState } from 'react';
 import OpenedTrades from '../containers/OpenedTrades';
 import PopUp from '../components/PopUp';
+import TelegramEngine from '../containers/TelegramEngine';
 
 function App() {
 
@@ -19,6 +20,9 @@ function App() {
         break;
       case "trades_opened":
         setCurentDatasDisplay(<OpenedTrades />);
+        break;
+      case "telegram_engine":
+        setCurentDatasDisplay(<TelegramEngine />);
         break;
       default:
         setCurentDatasDisplay(<TradesHitory />);
